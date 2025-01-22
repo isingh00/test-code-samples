@@ -1,0 +1,28 @@
+{
+  "name": "your-vendor/sample-project",
+  "description": "A project using Mailgun PHP SDK for email handling and HTTP clients",
+  "type": "project",
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "mailgun/mailgun-php": "^4.2",
+    "php-http/curl-client": "^2.0",
+    "guzzlehttp/psr7": "^2.0",
+    "php-http/message": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "YourVendor\\SampleProject\\": "src/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "echo 'Mailgun PHP SDK and HTTP clients installed'"
+    ]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

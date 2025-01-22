@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        API_KEY: ${API_KEY}
+        YOUR_DOMAIN: ${YOUR_DOMAIN}
+        API_BASE_URL: ${API_BASE_URL}
+        USER_NAME: ${USER_NAME}
+        USER_EMAIL: ${USER_EMAIL}
+        TEMPLATE_NAME: ${TEMPLATE_NAME}
+    environment:
+      - API_KEY=${API_KEY}
+      - API_KEY=${API_KEY}
+      - YOUR_DOMAIN=${YOUR_DOMAIN}
+      - API_BASE_URL=${API_BASE_URL}
+      - USER_NAME=${USER_NAME}
+      - USER_EMAIL=${USER_EMAIL}
+      - TEMPLATE_NAME=${TEMPLATE_NAME}
+    env_file:
+      - .env
