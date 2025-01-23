@@ -24,4 +24,4 @@ $result = $mg->messages()->send(
 	]
 );
 
-print_r($result);
+print_r($result->getMessage());

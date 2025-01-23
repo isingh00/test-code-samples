@@ -55,7 +55,7 @@ func SendSimpleMessageTemplate(domain, apiKey string) (string, error) {
 	m.SetTemplate("${TEMPLATE_NAME}")
 
 	m.AddRecipient("${USER_NAME} <${USER_EMAIL}>")
-	m.AddVariable("test", "test")
+	m.AddTemplateVariable("test", "test")
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*30)
 	defer cancel()
