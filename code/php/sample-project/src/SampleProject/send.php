@@ -1,6 +1,8 @@
 <?php
+// Include the Autoloader (see "Libraries" for install instructions)
 
 require 'vendor/autoload.php';
+
 // Use the Mailgun class from mailgun/mailgun-php v4.2
 use Mailgun\Mailgun;
 
@@ -8,7 +10,7 @@ use Mailgun\Mailgun;
 // Instantiate the client.
 $mg = Mailgun::create(getenv('API_KEY') ?: 'API_KEY');
 // When you have an EU-domain, you must specify the endpoint:
-// $mg = Mailgun::create('API_KEY', 'https://api.eu.mailgun.net'); 
+// $mg = Mailgun::create('getenv('API_KEY') ?: 'API_KEY', 'https://api.eu.mailgun.net'); 
 
 
 // Compose and send your message
