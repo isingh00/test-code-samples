@@ -11,7 +11,7 @@ def send_simple_message_templates
 	  to: "${USER_NAME} <${USER_EMAIL}>",
 		subject: "Hello ${USER_NAME}",
 		template: "${TEMPLATE_NAME}",
-		":h:X-Mailgun-Variables": "{\"test\": \"test\"}"
+		":h:X-Mailgun-Variables": '{"test": "test"}'
     },
     { Authorization: "Basic #{Base64.strict_encode64("api:#{ENV['API_KEY'] || 'API_KEY'}")}" }
   )
