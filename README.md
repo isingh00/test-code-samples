@@ -2,6 +2,7 @@
 
 1. create .env file containing
 
+   - 'API_KEY` your api key
    - `YOUR_DOMAIN` your domain name
    - `API_BASE_URL` api url
    - `USER_NAME` username used for templates example
