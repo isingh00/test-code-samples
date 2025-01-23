@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -v --user 'api:API_KEY' \
+curl -s --user 'api:API_KEY' \
 	 ${API_BASE_URL}/${YOUR_DOMAIN}/messages \
 	 -F from='Mailgun Sandbox <postmaster@${YOUR_DOMAIN}>' \
 	 -F to='${USER_NAME} <${USER_EMAIL}>' \
