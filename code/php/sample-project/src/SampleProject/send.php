@@ -17,10 +17,10 @@ $mg = Mailgun::create(getenv('API_KEY') ?: 'API_KEY');
 $result = $mg->messages()->send(
 	'${YOUR_DOMAIN}',
 	[
-		'from'        => 'mailgun@${YOUR_DOMAIN}',
-		'to'          => ['bar@example.com', 'YOU@${YOUR_DOMAIN}'],
-		'subject'     => 'Hello Iqbal Singh - php send',
-		'text'		  => 'Testing some Mailgun awesomeness!'
+		'from'        => 'Mailgun Sandbox <postmaster@${YOUR_DOMAIN}>',
+		'to'          => '${USER_NAME} <${USER_EMAIL}>',
+		'subject'     => 'Hello ${USER_NAME}',
+		'text'		  => 'Congratulations ${USER_NAME}, you just sent an email with Mailgun! You are truly awesome!'
 	]
 );
 

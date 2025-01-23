@@ -17,11 +17,10 @@ namespace MailGunExamples
             var client = new RestClient(options);
             var request = new RestRequest("/${YOUR_DOMAIN}/messages", Method.Post);
             request.AlwaysMultipartFormData = true;
-            request.AddParameter("from", "Excited User <mailgun@${YOUR_DOMAIN}>");
-            request.AddParameter("to", "YOU@${YOUR_DOMAIN}");
-            request.AddParameter("to", "bar@example.com");
-            request.AddParameter("subject", "Hello");
-            request.AddParameter("text", "Testing some Mailgun awesomeness!");
+            request.AddParameter("from", "Mailgun Sandbox <postmaster@${YOUR_DOMAIN}>");
+            request.AddParameter("to", "${USER_NAME} <${USER_EMAIL}>");
+            request.AddParameter("subject", "Hello ${USER_NAME}");
+            request.AddParameter("text", "Congratulations ${USER_NAME}, you just sent an email with Mailgun! You are truly awesome!");
             return await client.ExecuteAsync(request);
         }
     }

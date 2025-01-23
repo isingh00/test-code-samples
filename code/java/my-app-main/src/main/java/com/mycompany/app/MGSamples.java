@@ -14,11 +14,10 @@
 
   		HttpResponse<JsonNode> request = Unirest.post("${API_BASE_URL}/${YOUR_DOMAIN}/messages")
   			.basicAuth("api", apiKey)
-  			.queryString("from", "Excited User <mailgun@${YOUR_DOMAIN}>")
-  			.queryString("to", "YOU@${YOUR_DOMAIN}")
-			.queryString("to", "bar@example.com")
-  			.queryString("subject", "Hello")
-  			.queryString("text", "Testing some Mailgun awesomeness!")
+  			.queryString("from", "Mailgun Sandbox <postmaster@${YOUR_DOMAIN}>")
+  			.queryString("to", "${USER_NAME} <${USER_EMAIL}>")
+  			.queryString("subject", "Hello ${USER_NAME}")
+  			.queryString("text", "Congratulations ${USER_NAME}, you just sent an email with Mailgun! You are truly awesome!")
   			.asJson();
   		return request.getBody();
   	}

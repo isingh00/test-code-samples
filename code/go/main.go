@@ -30,11 +30,10 @@ func SendSimpleMessage(domain, apiKey string) (string, error) {
 	//When you have an EU-domain, you must specify the endpoint:
 	//mg.SetAPIBase("https://api.eu.mailgun.net/v3")
 	m := mg.NewMessage(
-		"Excited User <mailgun@${YOUR_DOMAIN}>",
-		"Hello",
-		"Testing some Mailgun awesomeness!",
-		"YOU@${YOUR_DOMAIN}",
-		"bar@example.com",
+		"Mailgun Sandbox <postmaster@${YOUR_DOMAIN}>",
+		"Hello ${USER_NAME}",
+		"Congratulations ${USER_NAME}, you just sent an email with Mailgun! You are truly awesome!",
+		"${USER_NAME} <${USER_EMAIL}>",
 	)
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*30)

@@ -11,10 +11,10 @@ async function sendSimpleMessage() {
   });
   try {
     const data = await mg.messages.create("${YOUR_DOMAIN}", {
-      from: "Excited User <mailgun@${YOUR_DOMAIN}>",
-      to: ["YOU@${YOUR_DOMAIN}", "bar@example.com"],
-      subject: "Hello",
-      text: "Testing some Mailgun awesomeness!",
+      from: "Mailgun Sandbox <postmaster@${YOUR_DOMAIN}>",
+      to: ["${USER_NAME} <${USER_EMAIL}>"],
+      subject: "Hello ${USER_NAME}",
+      text: "Congratulations ${USER_NAME}, you just sent an email with Mailgun! You are truly awesome!",
     });
 
     console.log(data); // logs response data
