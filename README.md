@@ -8,6 +8,6 @@
    - `USER_EMAIL` email used for templates example
    - `TEMPLATE_NAME` template name used for templates example
 
-2. run `docker-compose up`
+2. run `docker compose -f 'docker-compose.yml' up -d --build `
 
 3. Check docker build logs to view code compile errors and other code output.
