@@ -14,7 +14,7 @@ replace_in_file() {
   rm "$file.bak"
 }
 
-find /code/ -type f \( -iname "*.java" -o -iname "*.py" -o -iname "*.mjs" -o -iname "*.go" -o -iname "*.php" -o -iname "*.rb" -o -iname "*.cs" \) | while read -r file; do
+find /code/ -type f \( -iname "*.java" -o -iname "*.py" -o -iname "*.mjs" -o -iname "*.go" -o -iname "*.php" -o -iname "*.rb" -o -iname "*.cs"  -o -iname "*.sh" \) | while read -r file; do
     replace_in_file "$file"
 done
 echo "Variable replacement completed."
