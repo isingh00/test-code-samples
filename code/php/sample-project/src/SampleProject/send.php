@@ -10,7 +10,7 @@ use Mailgun\Mailgun;
 // Instantiate the client.
 $mg = Mailgun::create(getenv('API_KEY') ?: 'API_KEY');
 // When you have an EU-domain, you must specify the endpoint:
-// $mg = Mailgun::create('getenv('API_KEY') ?: 'API_KEY', 'https://api.eu.mailgun.net'); 
+// $mg = Mailgun::create(getenv('API_KEY') ?: 'API_KEY', 'https://api.eu.mailgun.net'); 
 
 
 // Compose and send your message
